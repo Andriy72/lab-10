@@ -1,0 +1,46 @@
+class Powder:
+    total_value = 0
+
+
+    def __init__(self, name='default', type='default', color='default', manufacturer='default', value=0):
+        self.name = name
+        self.type = type
+        self.color = color
+        self.manufacturer = manufacturer
+        self.value = value
+        Powder.total_value += value
+
+    def to_string(self):
+        print('Name: %s  \nType: %s \nColor: %s \nManufacturer: %s \nValue: %s' % (
+        self.name, self.type, self.color, self.manufacturer, self.value))
+
+    def print_sum(self):
+        print("Value of " + self.manufacturer + "'s powder: ", self.value, "grn")
+
+
+def print_static_sum():
+    print('Total value: {0} grn'.format(Powder.total_value))
+
+
+if __name__ == '__main__':
+    Powder0 = Powder()
+    Powder1 = Powder('Seaway', 'handle ', 'white', 'Pupe', 15600)
+    Powder2 = Powder('DeepGape', "automatic", 'black','Gad', 3155)
+    Powder3 = Powder('Gaster', 'automatic'," colored", 'Merek', 10000)
+    Powder4 = Powder('Miller ', 'handle', 'universal','Odin', 25555)
+
+Powder0.to_string
+print("\n")
+Powder1.to_string()
+print("\n")
+Powder2.to_string()
+print("\n")
+Powder3.to_string()
+print("\n")
+Powder4.to_string()
+print("\n\n")
+Powder1.print_sum()
+Powder2.print_sum()
+Powder3.print_sum()
+Powder4.print_sum()
+Powdercontent = print_static_sum()
